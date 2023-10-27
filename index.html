@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="catalogo de livros, projeto final para o modulo de frontend estatico do programa de frontend da ada em parceria com ifood">
+    <meta name="author" content="Gabrielle Pires da Silva">
+    <meta name="keywords" content="HTML, CSS, frontend estatico, catalogo de livros">
+    <title>Bookshelf</title>
+
+
+    <link rel="shortcut icon" href="./assets/iconelivroaberto.svg" type="image/x-icon" />
+
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- arquivo css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="header">
+            <!-- icone barra de navegação -->
+            <picture>
+                <img src="./assets/iconelivroaberto.svg" alt="logo livro aberto" height="30">
+            </picture>
+            <!-- barra de navegação -->
+            <div class="nav" id="navBar">
+                <!-- icone toggle -->
+                <picture>
+                    <img src="./assets/toggleicon.svg" id="btn-mobile" class="toggleIcon" alt="icone do menu toggle">
+                </picture>
+                <!-- links do menu -->
+                <ul class="menu">
+                    <li><a href="#navBar">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#contactUs">Entre em contato</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Topo da pagina -->
+        <section class="banner">
+            <picture>
+                <img src="./assets/meninacomlivros.svg" class="logoBanner"
+                    alt="logo com uma menina sentada sorbe uma pilha de livros">
+            </picture>
+
+            <div class="logoInfo">
+                <h1>Bookshelf</h1>
+                <p>Onde as melhores indicações <br> de livros estão!</p>
+            </div>
+            <picture>
+                <img src="./assets/gatinho.svg" class="catIcon" alt="ilustração de gatinho sentado">
+            </picture>
+        </section>
+    </header>
+
+    <main>
+        <!-- TABELA DE FAVORITOS -->
+        <section class="favoritos">
+            <picture>
+                <img src="./assets/wishlist.svg" alt="ilustração lista de favoritos">
+            </picture>
+            <div>
+                <table>
+                    <h2>Os Favoritos</h2>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Editora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Corte de Espinhos e Rosas</td>
+                            <td>Sarah J. Maas</td>
+                            <td>Galera</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Nevernight: A Sombra do Corvo</td>
+                            <td>Jay Kristoff</td>
+                            <td>Plataforma 21</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Os Sete</td>
+                            <td>André Vianco</td>
+                            <td>Novo Século</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- titulo catalogo -->
+        <section id="catalogo">
+            <h2>Estante de Livros</h2>
+        </section>
+        <!-- catalogo -->
+        <section class="catalogo">
+
+            <article>
+
+                <picture>
+                    <img src="https://m.media-amazon.com/images/I/51Eb7qz0V6L._SY445_SX342_.jpg"
+                        alt="capa corte de espinhos e rosas" class="cover"
+                        onclick="abrirConteudo('janela1', 'fechar1')">
+                </picture>
+                <!-- modal para deixar o fundo escuro -->
+                <div class="janela" id="janela1">
+                    <!-- conteúdo principal -->
+                    <div class="conteudo">
+                        <button class="fechar" id="fechar1">X</button>
+                        <div>
+                            <ul class="moreInfo">
+                                <li>Autor: Sarah J. Maas</li>
+                                <li>Editora: Galera</li>
+                                <li>Gênero: Fantasia</li>
+                                <li>
+                                    <a href="https://www.amazon.com.br/Corte-espinhos-rosas-Vol-especial-ebook/dp/B09HR499JQ/ref=sr_1_2?crid=1DGAQK7OECB9Z&keywords=corte+de+espinhos+e+rosas&qid=1698186779&s=digital-text&sprefix=corte%2Cdigital-text%2C440&sr=1-2"
+                                        target="_blank">53,99</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mainInfo">
+                            <h3>Corte de Espinhos e rosas</h3>
+                            <p>Depois de anos sendo escravizados pelas fadas, os humanos conseguiram se libertar e,
+                                agora, coexistem com os seres místicos. Cerca de cinco séculos após a guerra que definiu
+                                o futuro das espécies, Feyre, filha de um casal de mercadores, é forçada a se tornar uma
+                                caçadora para ajudar a família, afundada na pobreza. Após matar uma criatura feérica
+                                transformada em lobo, uma criatura bestial surge exigindo uma reparação.
+                                <br><br>
+
+                                Arrastada para uma terra mágica e traiçoeira — que ela só conhecia através de lendas —,
+                                a jovem descobre que seu captor não é um animal, mas Tamlin, senhor da Corte Feérica da
+                                Primavera. À medida que ela descobre mais sobre este mundo onde a magia impera, seus
+                                sentimentos por Tamlin passam da mais pura hostilidade até uma paixão avassaladora.
+                                Enquanto isso, uma sinistra e antiga sombra avança sobre o mundo das fadas e Feyre deve
+                                provar seu amor para detê-la... ou Tamlin e seu povo estarão condenados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+            <article>
+                <picture>
+                    <img src="https://m.media-amazon.com/images/I/81mvR9JOdCL._SY466_.jpg"
+                        alt="capa feita de fumaça e osso" class="cover" onclick="abrirConteudo('janela2', 'fechar2')">
+                </picture>
+                <div class="janela" id="janela2">
+                    <!-- modal para deixar o fundo escuro -->
+                    <div class="conteudo">
+                        <button class="fechar" id="fechar2">X</button>
+                        <!-- conteúdo principal -->
+                        <div>
+                            <ul class="moreInfo">
+                                <li>Autor: Laini Taylor</li>
+                                <li>Editora: Intrinseca</li>
+                                <li>Gênero: Fantasia</li>
+                                <li>
+                                    <a href="https://www.amazon.com.br/Feita-fuma%C3%A7a-osso-Laini-Taylor-ebook/dp/B009M866WC/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=GR6YNZYMJLGC&keywords=feita+de+fuma%C3%A7a+e+osso&qid=1698249830&s=books&sprefix=feita+de+fuma%C3%A7a+e+osso%2Cstripbooks%2C221&sr=1-1"
+                                        target="_blank">25,00</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mainInfo">
+                            <h3>Feita de Fumaça e Osso</h3>
+                            <p>Em uma loja sombria e empoeirada, o estoque de dentes de um demônio está perigosamente
+                                baixo. E, nas tumultuadas ruas de Praga, uma jovem estudante de arte está prestes a se
+                                envolver em uma guerra de outro mundo.
+                                <br><br>
+
+                                O nome dela é Karou. Seus cadernos de desenho são repletos de monstros que podem ou não
+                                ser reais; ela desaparece e ressurge do nada, despachada em enigmáticas missões; fala
+                                diversas línguas, nem todas humanas, e seu cabelo azul nasce exatamente dessa cor. Quem
+                                ela é de verdade? A pergunta a persegue, e o caminho até a resposta começa no olhar
+                                abrasador de um completo estranho.
+                                <br><br>
+
+                                Um romance moderno e arrebatador, em que batalhas épicas e um amor proibido unem-se na
+                                esperança de um mundo refeito.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="https://m.media-amazon.com/images/I/81f1oA6voPL._SY466_.jpg" alt="capa trono de vidro"
+                        class="cover" onclick="abrirConteudo('janela3', 'fechar3')">
+                </picture>
+                <div class="janela" id="janela3">
+                    <!-- modal para deixar o fundo escuro -->
+                    <div class="conteudo">
+                        <button class="fechar" id="fechar3">X</button>
+                        <!-- conteúdo principal -->
+                        <div>
+                            <ul class="moreInfo">
+                                <li>Autor: Sarah J. Maas</li>
+                                <li>Editora: Galera</li>
+                                <li>Gênero: Fantasia</li>
+                                <li>
+                                    <a href="https://www.amazon.com.br/Trono-vidro-Vol-Sarah-Maas/dp/8501401382/ref=sr_1_3?crid=PW98WP7RM73I&keywords=trono+de+vidro&qid=1698255243&s=books&sprefix=trono+%2Cstripbooks%2C304&sr=1-3"
+                                        target="_blank">50,92</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mainInfo">
+                            <h3>Trono de Vidro</h3>
+                            <p>Aos 18 anos uma prisioneira está cumprindo sua sentença. Ela é uma assassina, e a melhor
+                                de Adarlan. Aprisionada e fraca, ela está quase perdendo as esperanças, a sentença de
+                                morte é iminente, mas a jovem recebe uma proposta inesperada: representar o príncipe em
+                                uma competição com lutando contra os mais habilidosos assassinos e larápios do reino.
+                                Mas ela não diz sim apenas para matar, seu foco é obter sua liberdade de volta.
+                                <br><br>
+
+                                Se derrotar os 23 assassinos, ladrões e soldados, será a campeã do rei e estará livre
+                                depois de servi-lo por alguns anos.
+
+                                Endovier é uma sentença de morte, e cada duelo em Adarlan será para viver ou morrer. Mas
+                                se o preço é ser livre, e ela está disposta a tudo.
+
+                                Seu nome é Celaena Sardothien. O príncipe herdeiro vai provocá-la, o capitão da guarda
+                                fará tudo para protegê-la. E uma princesa de terras distantes se tornará algo que
+                                Celaena jamais pensou ter novamente: uma amiga.<br><br>
+
+                                Mas algo maligno habita o castelo - e está ali para matar. Quando os demais competidores
+                                começam a morrer, um a um e de maneira terrível, Celaena se vê mais uma vez envolvida em
+                                uma batalha pela sobrevivência e inicia uma jornada desesperada para desvendar a origem
+                                daquele mal antes que ele destrua o mundo dela. E sua única chance de ser livre.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="https://m.media-amazon.com/images/I/913JsPnTV5L._SY466_.jpg" alt="capa a sombra do corvo"
+                        class="cover" onclick="abrirConteudo('janela4', 'fechar4')">
+                </picture>
+                <div class="janela" id="janela4">
+                    <!-- modal para deixar o fundo escuro -->
+                    <div class="conteudo">
+                        <button class="fechar" id="fechar4">X</button>
+                        <div>
+                            <ul class="moreInfo">
+                                <li>Autor: Jay Kristoff</li>
+                                <li>Editora: Plataforma21</li>
+                                <li>Gênero: Fantasia</li>
+                                <li>
+                                    <a href="https://www.amazon.com.br/Nevernight-sombra-corvo-Cr%C3%B4nicas-Quasinoite-ebook/dp/B09VK7PR8J/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=10WPWECF3UHJY&keywords=a+sombra+do+corvo&qid=1698255577&s=digital-text&sprefix=a+sombra+do+corvo%2Cdigital-text%2C208&sr=1-1"
+                                        target="_blank">59,90</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mainInfo">
+                            <h3>Nevernight: A Sombra do Corvo</h3>
+                            <p>Destinada a destruir impérios, Mia Corvere é apenas uma criança quando tem sua primeira
+                                lição sobre a morte. Mais tarde, aos 16 anos, a jovem que cresceu nas sombras inicia sua
+                                jornada para manter a promessa feita no dia em que perdeu tudo. Entretanto, a chance de
+                                vencer inimigos tão poderosos será efêmera, e se Mia deseja vingança, deve se tornar uma
+                                assassina sem igual. Assim, ela precisará provar suas habilidades diante dos mais
+                                perigosos amigos e inimigos, e sobreviver a assassinos, mentirosos e demônios no cerne
+                                de um lugar que cultua o assassinato. A Igreja Vermelha não é uma escola comum, mas Mia
+                                Corvere também não é uma estudante qualquer. As sombras a acompanham, e bebem todo seu
+                                medo.
+                                Nevernight é o primeiro volume da trilogia best-seller As crônicas da quasinoite.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="https://m.media-amazon.com/images/I/910XaDIZZDL._SY466_.jpg"
+                        alt="capa orgulho e preconceito" class="cover" onclick="abrirConteudo('janela5', 'fechar5')">
+                </picture>
+                <div class="janela" id="janela5">
+                    <!-- modal para deixar o fundo escuro -->
+                    <div class="conteudo">
+                        <button class="fechar" id="fechar5">X</button>
+                        <!-- conteúdo principal -->
+                        <div>
+                            <ul class="moreInfo">
+                                <li>Autor: Jane Austen</li>
+                                <li>Editora: José Olympio</li>
+                                <li>Gênero: Romance, literatura inglesa</li>
+                                <li>
+                                    <a href="https://www.amazon.com.br/Orgulho-preconceito-Jane-Austen-ebook/dp/B09T2GYJ6H/ref=sr_1_7?crid=W2TIASKG2RTU&keywords=orgulho+e+preconceito&qid=1698256505&s=digital-text&sprefix=orgulho+e+%2Cdigital-text%2C201&sr=1-7"
+                                        target="_blank">34,11</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mainInfo">
+                            <h3>Orgulho e Preconceito</h3>
+                            <p>Quando Elizabeth Bennet conhece o cobiçado Fitzwilliam Darcy, não hesita em julgá-lo
+                                arrogante e presunçoso, afinal ele parece desprezar sua companhia, assim como a de todo
+                                mundo, demonstrando um temperamento rude e orgulhoso, impossível de agradar. Após
+                                descobrir o envolvimento do detestável cavalheiro nos eventos que separaram sua querida
+                                irmã, Jane, do jovem Bingley, Elizabeth está determinada a odiá-lo ainda mais. Uma
+                                surpreendente reviravolta, porém, poderá provar que as primeiras impressões nem sempre
+                                são incontestáveis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="https://m.media-amazon.com/images/I/71sakLnYUbL._SY466_.jpg"
+                        alt="capa orgulho e preconceito" class="cover" onclick="abrirConteudo('janela6', 'fechar6')">
+                </picture>
+                <div class="janela" id="janela6">
+                    <!-- modal para deixar o fundo escuro -->
+                    <div class="conteudo">
+                        <button class="fechar" id="fechar6">X</button>
+                        <div>
+                            <ul class="moreInfo">
+                                <li>Autor: Rosa Amanda Strausz</li>
+                                <li>Editora: Global Editora</li>
+                                <li>Gênero: Suspense, contos</li>
+                                <li>
+                                    <a href="https://www.amazon.com.br/Sete-Ossos-Maldi%C3%A7%C3%A3o-Amanda-Strausz/dp/8526018922"
+                                        target="_blank">40,99</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mainInfo">
+                            <h3>Sete Ossos e uma Maldição</h3>
+                            <p>Em Sete ossos e uma maldição, Rosa Amanda Strausz conduz o leitor a um clima de terror e
+                                mistério de tirar o fôlego. Os 10 contos são construídos com a mestria de quem sabe
+                                narrar, de quem sabe percorrer os caminhos sinuosos do suspense. Enquanto o leitor
+                                passeia por histórias aparentemente comuns, o suspense cresce na narrativa. O que parece
+                                ser apenas a história de um casal recém-casado, comprando uma mansão antiga, ganha
+                                contornos arrepiantes. A mãe que vende o filho para uma família de bens transforma-o em
+                                um morto-vivo. Com a respiração presa, é preciso chegar rápido ao final do conto, em
+                                busca do ápice tão desejado. Mas a autora surpreende. A dúvida é uma constante. E, às
+                                vezes, é o leitor quem completa, com seus próprios medos, o desfecho da história. Aliás,
+                                uma história de arrepiar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="https://m.media-amazon.com/images/I/51z0s3GcvwL._SY445_SX342_.jpg" alt="capa it a coisa"
+                        class="cover" onclick="abrirConteudo('janela7', 'fechar7')">
+                </picture>
+                <!-- modal para deixar o fundo escuro -->
+                <div class="janela" id="janela7">
+                    <div class="conteudo">
+                        <button class="fechar" id="fechar7">X</button>
+                        <div>
+                            <ul class="moreInfo">
+                                <li>Autor: Stephen King</li>
+                                <li>Editora: Suma</li>
+                                <li>Gênero: Terror</li>
+                                <li>
+                                    <a href="https://www.amazon.com.br/coisa-Stephen-King/dp/8560280944?ref_=Oct_d_omwf_d_7872746011_4&pd_rd_w=CT8tT&content-id=amzn1.sym.dc8a0645-5e31-4395-a583-f8311a9afa07&pf_rd_p=dc8a0645-5e31-4395-a583-f8311a9afa07&pf_rd_r=B1TH34YHB6GPBDE6V45R&pd_rd_wg=nESm4&pd_rd_r=8d08454b-bd3f-4f80-b1d1-0325258cdd36&pd_rd_i=8560280944"
+                                        target="_blank">83,28</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mainInfo">
+                            <h3>It: A coisa</h3>
+                            <p>Durante as férias de 1958, em uma pacata cidadezinha chamada Derry, um grupo de sete
+                                amigos começa a ver coisas estranhas. Um conta que viu um palhaço, outro que viu uma
+                                múmia. Finalmente, acabam descobrindo que estavam todos vendo a mesma coisa: um ser
+                                sobrenatural e maligno que pode assumir várias formas. É assim que Bill, Beverly, Eddie,
+                                Ben, Richie, Mike e Stan enfrentam a Coisa pela primeira vez.
+                                <br><br>
+
+                                Quase trinta anos depois, o grupo volta a se encontrar. Mike, o único que permaneceu em
+                                Derry, dá o sinal ― uma nova onda de terror tomou a pequena cidade. É preciso unir
+                                forças novamente. Só eles têm a chave do enigma. Só eles sabem o que se esconde nas
+                                entranhas de Derry. Só eles podem vencer a Coisa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="https://m.media-amazon.com/images/I/61Q8bQdhklL._SY466_.jpg" alt="capa teto para dois"
+                        class="cover" onclick="abrirConteudo('janela8', 'fechar8')">
+                </picture>
+                <!-- modal para deixar o fundo escuro -->
+                <div class="janela" id="janela8">
+                    <div class="conteudo">
+                        <button class="fechar" id="fechar8">X</button>
+                        <div>
+                            <ul class="moreInfo">
+                                <li>Autor: Beth O'Leary</li>
+                                <li>Editora: Intrinseca</li>
+                                <li>Gênero: Romance</li>
+                                <li>
+                                    <a href="https://www.amazon.com.br/Teto-Para-Dois-Beth-Oleary/dp/8551005413/ref=sr_1_1?crid=2FJG627RED2CD&keywords=teto+para+dois&qid=1698257553&s=books&sprefix=teto+pa%2Cstripbooks%2C215&sr=1-1"
+                                        target="_blank">34,99</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mainInfo">
+                            <h3>Teto para Dois</h3>
+                            <p>Depois de três meses do fim do seu relacionamento, Tiffy finalmente sai do apartamento do
+                                ex-namorado. Agora ela precisa encontrar o quanto antes um lugar barato onde morar.
+                                Contrariando os amigos, ela topa um acordo bastante inusitado. <br><br>
+
+                                Enrolado com questões financeiras, Leon tem uma ideia pouco convencional para conseguir
+                                dinheiro rápido: anunciar seu apartamento com uma cama só, onde fica apenas no período
+                                da manhã, nos dias úteis, já que passa os fins de semana com a namorada e trabalha como
+                                enfermeiro no turno da noite. <br><br>
+
+                                Sem nunca terem se encontrado pessoalmente, Leon e Tiffy fecham um contrato de seis
+                                meses e passam a resolver as trivialidades do dia a dia por Post-its espalhados pela
+                                casa. Mas será que essa solução aparentemente perfeita pode resistir a um ex-namorado
+                                obsessivo, uma namorada ciumenta, um irmão encrencado, dois empregos exigentes e alguns
+                                amigos superprotetores?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="https://m.media-amazon.com/images/I/91LldWCllgS._SY466_.jpg" alt="capa o ceifador"
+                        class="cover" onclick="abrirConteudo('janela9', 'fechar9')">
+                </picture>
+                <!-- modal para deixar o fundo escuro -->
+                <div class="janela" id="janela9">
+                    <div class="conteudo">
+                        <button class="fechar" id="fechar9">X</button>
+                        <div>
+                            <ul class="moreInfo">
+                                <li>Autor: Neal Shusterman</li>
+                                <li>Editora: Seguinte</li>
+                                <li>Gênero: Fantasia</li>
+                                <li>
+                                    <a href="https://www.amazon.com.br/ceifador-Neal-Shusterman/dp/8555340357/ref=sr_1_1_sspa?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1HG99YXDHSROQ&keywords=o+ceifador&qid=1698257815&s=books&sprefix=o+ceifado%2Cstripbooks%2C225&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"
+                                        target="_blank">26,99</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mainInfo">
+                            <h3>O Ceifador</h3>
+                            <p>A humanidade venceu todas as barreiras: fome, doenças, guerras, miséria… Até mesmo a
+                                morte. Agora os ceifadores são os únicos que podem pôr fim a uma vida, impedindo que o
+                                crescimento populacional vá além do limite e a Terra deixe de comportar a população por
+                                toda a eternidade. Citra e Rowan são adolescentes escolhidos como aprendizes de ceifador
+                                - um papel que nenhum dos dois quer desempenhar. Para receberem o anel e o manto da
+                                Ceifa, os adolescentes precisam dominar a "arte" da coleta, ou seja, precisam aprender a
+                                matar. Porém, se falharem em sua missão - ou se a cumplicidade no treinamento se tornar
+                                algo mais -, podem colocar a própria vida em risco.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sobre -->
+        <section class="aboutUs">
+            <picture class="bookPic">
+                <img src="./assets/bibliophile.svg" alt="ilustração menina em frente ao livro">
+            </picture>
+            <div class="about" id="about">
+                <h2>Sobre nós</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid corporis tenetur, eos pariatur
+                    minima deleniti dignissimos corrupti! Tempora saepe molestias ipsa, beatae dolore corporis dicta,
+                    eligendi debitis, adipisci impedit alias? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Ad excepturi quo veniam enim. Adipisci inventore maxime minus cumque! Ex eum error molestias at
+                    nesciunt vitae temporibus, nobis tempora pariatur vel! Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Cumque velit, consequatur molestias vitae at quisquam non omnis libero distinctio
+                    itaque dolorem perferendis recusandae eveniet earum nihil, tempora quaerat, sed sint.</p>
+            </div>
+            <div class="carrossel">
+                <div class="slides">
+                    <input type="radio" name="slide" id="slide1" checked>
+                    <input type="radio" name="slide" id="slide2">
+                    <input type="radio" name="slide" id="slide3">
+
+                    <div class="slide s1">
+                        <img src="./assets/romance.png" alt="recomendação do livro Teto para Dois de Beth O'Leary">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/fantasia.png" alt="Recomendação do livro A Sombra do Corvo de Jay Kristoff">
+                    </div>
+                    <div class="slide">
+                        <img src="./assets/terror.png"
+                            alt="Recomendação do livro Sete Ossos e Uma Maldição de Rosa Amanda Strausz">
+                    </div>
+                    <div class="navigation">
+                        <label class="bar" for="slide1"></label>
+                        <label class="bar" for="slide2"></label>
+                        <label class="bar" for="slide3"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- formulario newsletter -->
+        <section>
+            <form action="">
+                <h2>Mande uma mensagem para nós!</h2>
+                <ul class="formulario" id="contactUs">
+                    <li>
+                        <label for="firstName">Nome: </label>
+                        <input type="text" id="firstName" name="firstName" placeholder=" Digite o seu nome">
+                    </li>
+                    <li>
+                        <label for="lastName">Sobrenome: </label>
+                        <input type="text" id="lastName" name="lastName" placeholder=" Digite seu sobrenome">
+                    </li>
+                    <li>
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" placeholder=" Digite seu email">
+                    </li>
+                    <li>
+                        <label for="phone">Telefone: </label>
+                        <input type="cel" id="phone" name="phone" placeholder=" (00) 0 0000-000">
+                    </li>
+                    <li>
+                        <textarea name="message" id="message" cols="55" rows="10"
+                            placeholder=" Escreva sua mensagem"></textarea>
+                    </li>
+                    <button type="submit">Enviar</button>
+                </ul>
+            </form>
+        </section>
+    </main>
+
+    <!-- informações sobre criador -->
+    <footer>
+        <div class="rodape">
+            <picture>
+                <img src="./assets/meninacomlivros.svg" class="iconeRodape"
+                    alt="ilustração de uma menina sentada sobre uma pilha de livros">
+            </picture>
+
+            <div class="quote">
+                <p>
+                    "Bibliotecas estão cheias de ideias, <br>talvez seja a mais poderosa e perigosa de todas as armas"
+                    <br>— Trono
+                    de Vidro</p>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/gabrielle-ps/">
+                        <img src="./assets/linkedin.svg" alt="icone lindekin">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/PSGabrielle">
+                        <img src="./assets/square-github.svg" alt="icone github">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./assets/instagram.svg" alt="icone instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./assets/facebook.svg" alt="icone facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./assets/youtube.svg" alt="icone youtube">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="copyRight">
+            <p>© 2023 Produzido por Gabrielle PS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
